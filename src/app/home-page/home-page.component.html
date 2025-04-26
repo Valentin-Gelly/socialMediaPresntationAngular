@@ -1,17 +1,30 @@
-<main class="mainFrame">
-        
-    <!-- Affichage heure et date -->
-    <div class="statusBar">
-        <span id="time"></span>
-        <span id="date"></span>
-    </div>
+<main class="virtualTour">
+  <h1>Présentation de l'application</h1>
+  <p>Cette application vous propose une visite virtuelle interactive en 6 étapes pour vous familiariser avec différentes applications de réseaux sociaux. Voici comment elle fonctionne :</p>
+  <ol>
+    <li>
+      <strong>Écran d'accueil</strong> : Dès le lancement de l'application, vous découvrirez un écran d'accueil qui présente les logos des principales applications sociales : <strong>Instagram, Snapchat, WhatsApp</strong> et <strong>TikTok</strong>.
+    </li>
+    <li>
+      <strong>Sélection d'une application</strong> : En cliquant sur l'icône de l'une de ces applications, vous accédez à un menu proposant plusieurs moyens de communication. Vous aurez la possibilité de choisir celui que vous préférez.
+    </li>
+    <li>
+      <strong>Conversation simulée</strong> : Après avoir sélectionné un moyen de communication, vous serez dirigé vers une page qui affiche une conversation typique liée à l'application choisie.
+    </li>
+    <li>
+      <strong>Interaction avec la conversation</strong> : Vous pourrez alors cliquer pour faire apparaître une bulle de texte avec un message d'entretien en rapport avec l'image affichée. Cette étape vous permet de simuler une conversation dans l'application sélectionnée.
+    </li>
+    <li>
+      <strong>Étape suivante</strong> : En cliquant sur le bouton <strong>"Suivant"</strong>, vous accédez à l'étape suivante qui vous propose une nouvelle interaction, accompagnée d'un bouton pour <strong>"Recommencer avec un autre réseau social"</strong> ou <strong>"Quitter"</strong> l'application.
+    </li>
+    <li>
+      <strong>Réponse physique</strong> : Après la visite virtuelle, vous pourrez répondre à des questions sur un carnet physique, mis à votre disposition près de l'écran, pour compléter l'expérience.
+    </li>
+  </ol>
+  
+  <!-- Button to navigate to /phonehome -->
+  <div class="button-container">
+    <a href="/phoneHomePage" class="button">Aller à la page d'accueil</a>
+  </div>
+</main>
 
-    <nav>
-        <ul>
-            <li><a routerLink="/insta"><img src="../../assets/icons/Instagram.png" alt=""></a></li>
-            <li><a routerLink="/snap"><img src="../../assets/icons/snapchat.png" alt=""></a></li>
-            <li><a routerLink="/whatsapp"><img src="../../assets/icons/whatsapp.png" alt=""></a></li>
-            <li><a routerLink="/tiktok"><img src="../../assets/icons/tiktok.png" alt=""></a></li>
-        </ul>
-    </nav>
-  </main>

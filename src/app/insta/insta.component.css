@@ -1,0 +1,57 @@
+/* 🖥️ Position basse des icônes : juste la tête qui dépasse */
+
+nav {
+    position: absolute !important;
+    bottom: -80px !important ;
+    width: 100% !important;
+    height: 120px !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    transition: bottom 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+nav:hover {
+    bottom: 0 !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: auto;
+        padding: 10px 0;
+        height: ;
+    }
+
+    .mainFrame:hover nav {
+        bottom: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav ul li img {
+        width: 60px;
+        height: 60px;
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        bottom: -40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li img {
+        width: 50px;
+        height: 50px;
+        margin-top: -15px;
+    }
+}

@@ -1,0 +1,107 @@
+.mainFrame {
+    padding: 0 !important;
+}
+
+.snapIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto; /* Permet le défilement vertical */
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espace entre les messages */
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.message {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    max-width: 80%;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.message p {
+    color: black;
+    margin: 0;
+}
+
+.sender {
+    font-weight: bold;
+    color: #333;
+}
+
+.sender-details {
+    font-size: 14px;
+    color: #666;
+}
+
+.time {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.sender-details, .time {
+    margin-top: 5px;
+}
+
+/* Alternance des messages */
+.message:nth-child(odd) {
+    align-self: flex-start;  /* Messages à gauche */
+    background-color: #e0e0e0; /* Fond gris pour les messages à gauche */
+}
+
+.message:nth-child(even) {
+    align-self: flex-end;    /* Messages à droite */
+    background-color: #d0e9e8; /* Fond bleu clair pour les messages à droite */
+}
+
+h1, p {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.messages-container ul {
+    padding-left: 20px;
+}
+
+.messages-container ul li {
+    list-style-type: disc;
+    color: white;
+}
+
+.messages-container img {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .image_temoignage{
+    display: flex;
+    gap: 20px;
+  }

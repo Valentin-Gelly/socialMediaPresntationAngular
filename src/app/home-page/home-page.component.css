@@ -1,130 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
-* {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    box-sizing: border-box;
+.virtualTour {
+  max-width: 800px;
+  margin: 5vh auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #e0e0e0;
-    margin: 0;
-    padding: 0;
+.virtualTour h1 {
+  text-align: center;
+  font-size: 3vh;
+  margin-bottom: 30px;
+  color: #444;
 }
 
-.mainFrame {
-    position: relative;
-    width: 700px;
-    max-width: 95vw;
-    height: 93vh;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2.5vh auto;
-    padding: calc(1vh - 2px) calc(1vw - 2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('../../assets/fond-écran.avif');
-    background-size: cover;
-    overflow: hidden;
+.virtualTour ol {
+  padding-left: 20px;
 }
 
-.statusBar {
-    position: absolute;
-    top: 3%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 6vh;
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px #000;
-    border: solid 1px #fff;
-    border-radius: 15px;
-    padding: 5px 10px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3);
+.virtualTour li {
+  margin-bottom: 20px;
+  font-size: 2.3vh;
+  line-height: 1.6;
 }
 
-nav {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background-color: rgba(0, 0, 0, 0.1);
+.virtualTour strong {
+  color: #111;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    height: 100%;
-    align-items: center;
+.button-container {
+  text-align: center;
+  margin-top: 20px;
 }
 
-nav ul li img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li img:hover {
-    transform: scale(1.1);
+.button:hover {
+  background-color: #0056b3;
 }
 
-/* 📱 Responsive */
 
 @media screen and (max-width: 768px) {
-    .mainFrame {
-        width: 95vw;
-        height: 95vh;
-    }
+  .virtualTour {
+    padding: 20px;
+  }
 
-    .statusBar {
-        font-size: 4vh;
-        padding: 3px 8px;
-    }
+  .virtualTour h1 {
+    font-size: 2.5vh;
+  }
 
-    nav {
-        height: auto;
-        padding: 10px 0;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    nav ul li img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .statusBar {
-        font-size: 3vh;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul li img {
-        width: 50px;
-        height: 50px;
-    }
+  .virtualTour li {
+    font-size: 2vh;
+  }
 }

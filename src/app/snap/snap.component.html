@@ -1,1 +1,149 @@
-<p>snap works!</p>
+<main class="mainFrame">
+    <div class="container">
+        <span *ngIf="currentStep >= 1">        
+            <img src="../../assets/icons/snapchat.png" alt="Snapchat Icon" class="snapIcon">
+            <h1>Snapchat</h1>
+            <p>Bienvenue sur la page Snapchat !</p>
+            <p>Cette page est dédiée à Snapchat, l'application de messagerie éphémère.</p>
+
+            <div>
+                <h2>Les moyens de communication</h2>
+                <ul>
+                    <li>Messages Vocaux</li>
+                    <li>Messages Photo / Vidéos</li>
+                </ul>
+            </div>
+            <p>Par quoi voullez vous comencer ? </p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <button  class="home-button" (click)="choiceVocal()">Messages Vocaux</button>
+                <button  class="home-button" (click)="choicePhoto()">Messages Photo / Vidéos</button>
+            </div>
+        </span>
+        <div id="message-vocal-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'vocal'">
+            <h2>Les messages vocaux</h2>
+            <div class="message">
+                <div class="sender-details">
+                    Mathias, 26 ans, étudiant
+                </div>
+                <p>"Quand tu fais un vocal, c'est plus réaliste. Enfin, c'est directement toi qui parles, donc tu
+                    ressens plus ce que tu veux transmettre, les émotions, etc. Tes mots, ils sont faciles, ou tu peux
+                    donner plein de synonymes parce que tu lui parles. Alors qu'à l'écrit, ça prend plus de temps et
+                    c'est moins spontané."</p>
+            </div>
+
+            <div class="message">
+                <div class="sender-details">
+                    Juliette, 22 ans, vendeuse en boulangerie
+                </div>
+                <p>"En plus de ça t'as les intonations dans ta voix, les intonations ça change tout dans les vocaux."
+                </p>
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Angèle, 22 ans, étudiante
+                </div>
+                <p>"Oui puis ça montre une proximité avec ton interlocuteur. Tu ne fais pas des vocaux à n'importe qui.
+                    Tu fais des vocaux avec une personne avec qui tu es à l'aise de parler en vocal et que ça ne va pas
+                    déranger d'entendre ta vieille voix alors qu'il est en train d'écouter de la musique."</p>
+            </div>
+            <img src="../../assets/snap/vocal.png" alt="">
+            <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+
+            <div id="message-vocal-3" class="explication_messages" *ngIf="currentStep === 3">
+                <h2>Explications sur les messages vocaux</h2>
+                <p>
+                    Dans cet exemple, les personnes enquêtées disent privilégier les messages vocaux en raison de
+                    l'ambiance et de leurs effets. Pour elles, ils permettent une interaction virtuelle "plus réaliste”,
+                    par les intonations de la voix, les émotions qui se rapprochent d'une conversation en face à face. </p>
+                <p>
+                    Ce qui est valorisé est une forme de "spontanéité” considérée absente dans les messages écrits.
+                    Les pratiques de communication par messages vocaux dépendent des contextes relationnels et des
+                    degrés de familiarité. En effet, elles supposent une forme de proximité qui implique d'être "à
+                    l'aise" et d'être sûre "que ça ne va pas déranger”. 
+                </p>
+                <p>  
+                    Ainsi, cette forme langagière sonore est valorisée comme
+                    preuve de relations plus intimes parce qu'on s'expose davantage à travers sa voix et ses émotions.
+                    Et vous qu'est-ce que vous en pensez ? Pourquoi choisissez-vous les messages vocaux ? Dans quel contexte ?
+                    Avec qui ?
+                </p> 
+                <button (click)="restart()" class="home-button">Recommencer la visite</button>
+            </div>
+        </div>
+        <div id="message-photo-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'photo'">
+            <h2>Les conversation photo et vidéos</h2>
+            <div class="message">
+                <div class="sender-details">
+                    Angèle, 22 ans, étudiante
+                </div>
+                <p>"C'est des vidéos [sur snapchat] , pas des appels, juste des
+                    vidéos non-stop. Parce que au moins dès que j'ai un truc à
+                    raconter à ma cousine, je le raconte, elle l'écoute, elle le voit en
+                    direct. Ça évite de l'embêter à tout le temps l'appeler. Et puis vu
+                    qu'on n'a pas des horaires qui sont les mêmes, parce que j'ai
+                    beaucoup moins de cours qu'elle, je peux lui raconter ma vie
+                    n'importe quand dans la journée et elle l'écoute quand elle a le
+                    temps"</p>
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Angèle, 22 ans, étudiante
+                </div>
+                <p>"Et pour le coup, pour Snap, je parle vraiment
+                    tout le temps, quasiment tout le temps, mais à
+                    tout le monde en photo et vidéo. Parce que
+                    moi, je mets ma tête à chaque fois, je peux
+                    réagir. Quand j'écris avec une réaction, j'ai la
+                    tête que j'ai, etc."</p>
+            </div>
+            <div class="image_temoignage" >
+                <img src="../../assets/snap/photo.png" alt="">
+                <img src="../../assets/snap/photo-exemple.png" alt="">
+            </div>
+
+            <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            
+            <div id="message-photo-3" class="explication_video_photo" *ngIf="currentStep === 3"> 
+                <h2>Explications sur les messages photo et vidéos</h2>
+                <p>
+                    Snapchat met à disposition des utilisateurs les messages vidéos (snap violet) et photo (snap rouge),
+                    qui utilisent
+                    l'image, l'écrit et le son. Angèle déclare photographier régulièrement son visage pour "réagir”, en
+                    envoyant des messages
+                    photo et vidéo pour capturer ses émotions et sentiments, qui s'expriment sur son visage à un
+                    instant-t. Elle déclare aussi
+                    utiliser beaucoup les vidéos pour partager son vécu "en direct” à sa cousine qui n'est pas là et qui
+                    ne peut pas y assister instantanément. 
+                </p>
+                <p>
+                    Les vidéos et les photos sont ainsi perçues par Angèle comme un moyen de partager,
+                    par l'image, le son, les émotions et la mise en récit, l'instantanéité d'un moment à ses proches, qui vivent l'action par
+                    procuration, lorsqu'elle est
+                    passée. Elle tente donc de réaliser une interaction quasi-réelle, de réduire la distance par cette
+                    mise en scène de l'instantanée,
+                    ce qui n'est pas possible, pour elle, avec un simple message écrit.
+                </p>
+                <p>
+                    Et vous qu'est-ce que vous en pensez ? Pourquoi choisissez-vous les messages photo et vidéos sur
+                    Snap ? Dans quel
+                    contexte ? Avec qui ?
+                    Si cela vous intéresse, nous vous invitons à répondre sur le cahier situé à côté de la fiche de
+                    présentation du QR Code!
+                    Bonne fin de visite :)
+                </p>
+                <button (click)="restart()" class="home-button">Recommencer la visite</button>
+            </div>
+
+        </div>
+
+    </div>
+    <nav>
+        <ul>
+            <li><a routerLink="/insta"><img src="../../assets/icons/Instagram.png" alt=""></a></li>
+            <li><a routerLink="/snap"><img src="../../assets/icons/snapchat.png" alt=""></a></li>
+            <li><a routerLink="/phoneHomePage"><img src="../../assets/icons/home.png" alt=""></a></li>
+            <li><a routerLink="/whatsapp"><img src="../../assets/icons/whatsapp.png" alt=""></a></li>
+            <li><a routerLink="/tiktok"><img src="../../assets/icons/tiktok.png" alt=""></a></li>
+        </ul>
+    </nav>
+</main>

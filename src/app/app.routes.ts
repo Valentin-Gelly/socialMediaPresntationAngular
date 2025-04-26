@@ -8,9 +8,11 @@ import { WhatsAppComponent } from './whats-app/whats-app.component';
 import { InstaComponent } from './insta/insta.component';
 import { TiktokComponent } from './tiktok/tiktok.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PhoneHomePageComponent } from './phone-home-page/phone-home-page.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: 'phoneHomePage', component: PhoneHomePageComponent},
     {path: 'home', component: HomePageComponent},
     {path: 'snap', component: SnapComponent},
     {path: 'whatsapp', component: WhatsAppComponent},
