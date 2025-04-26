@@ -1,37 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-*{
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE/Edge */
-    user-select: none;         /* Standard */
-}
-
-
-nav {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.statusBar {
-    position: absolute;
-    top: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 7vh;
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px #000;
-    border: solid 1px #fff;
-    border-radius: 15px;
-    padding: 5px 10px;
-    text-align: center;
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -41,6 +15,51 @@ body {
     padding: 0;
 }
 
+.mainFrame {
+    position: relative;
+    width: 700px;
+    max-width: 95vw;
+    height: 93vh;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5vh auto;
+    padding: calc(1vh - 2px) calc(1vw - 2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('../../assets/fond-écran.avif');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.statusBar {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 6vh;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    padding: 5px 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 nav ul {
     display: flex;
@@ -64,19 +83,48 @@ nav ul li img {
 nav ul li img:hover {
     transform: scale(1.1);
 }
-.mainFrame {
-    position: relative;
-    width: 700px;
-    height: 93vh;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2.5vh auto;
-    padding: calc(1vh-2px) calc(1vw-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('../../assets/fond-écran.avif');
-    background-size: cover;
+
+/* 📱 Responsive */
+
+@media screen and (max-width: 768px) {
+    .mainFrame {
+        width: 95vw;
+        height: 95vh;
+    }
+
+    .statusBar {
+        font-size: 4vh;
+        padding: 3px 8px;
+    }
+
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav ul li img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .statusBar {
+        font-size: 3vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul li img {
+        width: 50px;
+        height: 50px;
+    }
 }
