@@ -88,8 +88,8 @@ nav ul li img:hover {
 
 @media screen and (max-width: 768px) {
     .mainFrame {
-        width: 95vw;
-        height: 95vh;
+        width: 100vw;
+        height: 100vh;
     }
 
     .statusBar {
@@ -114,6 +114,14 @@ nav ul li img:hover {
 }
 
 @media screen and (max-width: 480px) {
+    .mainFrame {
+        width: 100vw !important;
+        height: 100vh !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important;
+        translate: 0 !important;
+    }
     .statusBar {
         font-size: 3vh;
     }

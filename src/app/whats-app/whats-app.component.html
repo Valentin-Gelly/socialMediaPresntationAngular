@@ -1,1 +1,400 @@
-<p>whats-app works!</p>
+<main class="mainFrame">
+    <div class="container">
+        <img src="../../assets/icons/whatsapp.png" alt="WhatsApp Icon" class="snapIcon">
+        <h1>Whats'App</h1>
+        <p>Bienvenue sur la page Whats'App !</p>
+
+        <div>
+            <h2>Les moyens de communication</h2>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <button class="home-button" (click)="choiceMessageEcrit()">Conversation par messages écrits</button>
+                <button class="home-button" (click)="choiceAbreviation()">Les abréviations/ ponctuations</button>
+                <button class="home-button" (click)="choiceEmojis()">Les emojis</button>
+                <button class="home-button" (click)="choiceGifs()">Les GIFs</button>
+                <button class="home-button" (click)="choiceAppelVideo()">Les appels vidéo</button>
+            </div>
+        </div>
+        <div id="message-ecrit-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'ecrit'">
+            <h2>Conversation par messages écrits</h2>
+            <div>
+                <img src="../../assets/whatsapp/message.png" alt="">
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Mathias, 26 ans, étudiant
+                </div>
+                <p>"Je ne fais jamais d'audio pour ma part. Je préfère les
+                    messages parce qu'ils permettent de dire le principal et
+                    de sélectionner les informations. Des fois j'ai
+                    l'impression de manquer de spontanéité et du coup ça
+                    me permet de prendre plus de temps pour réfléchir à
+                    ce que je vais dire et pas commencer un message
+                    audio et juste ne pas savoir quoi dire après et perdre
+                    du temps." </p>
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Aurélie, 22 ans, étudiante
+                </div>
+                <p>"Whats'App c'est un véritable réseau social, car au
+                    Chili, ils utilisent tous Whatsapp parce que ça coûte
+                    beaucoup trop cher les messages. Tout le monde
+                    communique par WhatsApp maintenant. Et puis, même
+                    le groupe familial et tout, mon frère qui n'a pas de carte
+                    SIM, par exemple, il est sur WhatsApp, avec internet
+                    c'est tout de suite plus facile." </p>
+                <strong>Aurélie parle de son usage de Whats'App depuis son année de
+                    mobilié au Chili</strong>
+            </div>
+
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+            <div id="message-ecrit-3" class="explication_Reels" *ngIf="currentStep === 3">
+                <h2>Explication des Messages &écrits</h2>
+                <p>
+                    Les messages écrits ont des similitudes avec les messages vocaux, dans la mesure où la relation de
+                    communication
+                    ne présuppose pas que le destinataire soit connecté à l'instant-t. Pour Angèle, ils se différencient
+                    des messages
+                    vocaux, en disant le principal et en sélectionnant les informations les plus importantes. (Pour en
+                    savoir plus,
+                    n'hésite pas à revenir en arrière pour en comprendre plus sur les messages vocaux.)
+                </p>
+                <p>
+                    En ce sens, les messages écrits apparaissent chez les utilisateurs comme étant plus réflexifs, car
+                    ils peuvent relire,
+                    supprimer, ou rajouter des informations, des mots, des lettres, avant d'envoyer définitivement le
+                    message. De plus,
+                    l'internaute fait un récapitulatif, un résumé, de ce qu'il souhaite communiquer à son interlocuteur,
+                    dont il ignore s'il est présent et disposé à échanger, à cet instant.
+                </p>
+                <p>
+                    Malgré cela, les messages écrits peuvent prendre
+                    des formes
+                    particulières selon les pratiques langagières des groupes et des personnes, mais aussi des contextes
+                    relationnels et des
+                    ambiances.
+                </p>
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
+        </div>
+        <div id="message-abreviation-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'abreviation'">
+            <h2>Les abréviations/ ponctuations </h2>
+            <div>
+                <img src="../../assets/whatsapp/abreviation.png" alt="">
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Juliette, vendeuse en boulangerie, 21 ans
+                </div>
+                <p>"Je me dis que c'est un peu sec [Mdr]. C'est pas très compliqué d'appuyer
+                    plusieurs fois sur la touche pour montrer que t'es impliqué. Et je trouve que quand
+                    on en met plusieurs [sous la forme Mdrrr], ça montre que c'est plus intense.
+                    En fonction de à qui je parle, je vais soit être vraiment très précise et faire
+                    attention à comment je structure mon texte, etc. et à d'autres personnes. je m'en
+                    fous un peu, ou alors c'est moins important. Enfin, dans la mesure où ça reste
+                    compréhensible quand même.
+                    Mais c'est vrai qu'avec ma grand-mère, par exemple, je ponctues énormément.
+                    Parce qu'elle aussi ponctue. Du coup, ça m'incite à ponctuer, mais elle, c'est de
+                    l'exagération, quoi. Elle met trois petits points à la fin de chaque mot. C'est de
+                    l'exclamation et tout ça, quoi."</p>
+                <strong>à propos de l'abréviation "mdrr"
+                    et de la ponctuation.</strong>
+            </div>
+
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+
+            <div id="message-stories-3" class="explication_stories" *ngIf="currentStep === 3">
+                <h2>Explication des abréviations/ ponctuations</h2>
+                <p>
+                    Les abréviations font preuve d'une certaine "créativité linguistique". Elles prennent la forme de
+                    changements de mots, en enlevant des
+                    consonnes, des voyelles, ou des sons, mais aussi en remplaçant certaines par d'autres, tout en
+                    gardant le même sens. Une syllabe peut
+                    alors être utilisée à la place d'un mot entier, comme "g" pour dire "j'ai". On trouve aussi des
+                    assemblages de consonnes comme "slt"
+                    pour "salut".
+                </p>
+                <p>
+                    Nous pouvons faire des "étirements graphiques" (Wissem Knaz, sociologue), comme
+                    rajouter plusieurs "r" à la fin de
+                    "mdr", pour exprimer une émotion plus forte. Pour Juliette écrire "mdr" fait ressentir une certaine
+                    froideur ou un "manque
+                    d'implication" de la part de son interlocuteur.
+                </p>
+                <p>
+                    Ainsi, la façon d'écrire et l'impression visuelle que cela implique sont susceptibles de provoquer
+                    des sensations et des réactions
+                    particulières chez les personnes, qui sont capables d'interpréter les potentielles intentions et
+                    significations de leurs interlocuteurs, et de
+                    ressentir une atmosphère plus ou moins conviviale. Ainsi, la proximité par messages se construit au
+                    fil de l'interaction virtuelle, car la
+                    communication peut faire l'objet d'adaptations et de mimétisme, comme Juliette qui utilise davantage
+                    la ponctuation quand elle discute
+                    avec sa grand-mère.
+                </p>
+                <p>
+                    Et vous utilisez-vous des abréviations? Faites-vous des étirements graphiques? Ponctuez-vous? Si oui
+                    pourquoi et pour quelles raisons?
+                    Si cela vous intéresse, nous vous invitons à répondre sur le cahier situé à côté de la fiche de
+                    présentation du QR Code! Bonne fin de
+                    visite :)
+                </p>
+
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
+        </div>
+        <div id="message-emojis-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'emojis'">
+            <h2>Les Émojis </h2>
+            <div>
+                <img src="../../assets/whatsapp/smiley.png" alt="">
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Moussa, 28 ans, étudiant originaire du Sénégal
+                </div>
+                <p>En rouge là, souvent j'utilise ça si quelqu'un
+                    me dit quelque chose qui ne va pas. Bon,
+                    je peux lui montrer que ça ne va pas, que je
+                    suis fâché.
+                    Là, souvent, on utilise ça pour montrer à
+                    quelqu'un qu'il pleure.
+                    "Là aussi, on utilise ça souvent [Emoji qui
+                    baille] dans les discussions [Avec les amis
+                    du pays], c'est des discussions de nuit, où il
+                    y a un décalage horaire. Parfois je lui dis
+                    que je suis fatigué que, je veux dormir.
+                    C'est des trucs qu'on utilise entre nous
+                    [Entre amis] mais pas avec les parents"</p>
+
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Angèle, 22 ans étudiante
+                </div>
+                <p>"Alors que moi personnellement,
+                    l'émoji je suis fatigué, Si je te l'envoie,
+                    c'est clairement ce que tu me
+                    racontes, ça m'ennuie. Ça me saoule
+                    que tu me racontes ça, je baille. Pareil
+                    pour l'émoji quand tu es énervée.
+                    "Moi, je vais l'envoyer quand
+                    quelqu'un va me lancer un petit pic ou
+                    un petit truc comme ça."
+                    " Si j'envoie le smiley pleure, c'est
+                    pour dire que je suis morte de rire."</p>
+
+            </div>
+
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+
+            <div id="message-emojis-3" class="explication_stories" *ngIf="currentStep === 3">
+                <h2>Explication des émojis</h2>
+                <p>
+                    Les emojis représentent et expriment des émotions, des idées ou des objets de manière visuelle. Ils
+                    apparaissent comme des outils qui
+                    rendent les conversations plus vivantes, en palliant une certaine inaccessibilité à l'autre. Pour
+                    Moussa, étudiant originaire du Sénégal,
+                    cet usage lui permet d'exprimer ses émotions et ses intentions à ses amis qui vivent encore au pays,
+                    de façon conventionnelle, sans avoir
+                    à trop s'investir, à trop écrire. Cependant, il n'utilise pas ces emojis avec ses parents qui ne
+                    sont pas familiers avec ces usages restreints
+                    au "nous", au groupe d'amis. Angèle, elle, se réapproprie les émoticônes pour leur attribuer un sens
+                    nouveau. Elle utilise le smiley qui
+                    baille pour signifier plutôt à son interlocuteur que ce qu'il lui dit "l'ennuie", et l'emoji qui
+                    pleure, pour signifier que ce qu'on lui envoie
+                    la fait très rire.
+                </p>
+                <p>
+                    Ainsi, les emojis sont sujets à d'interprétations différentes, qui dépendent des usages communs
+                    qu'en font les personnes au sein de leurs
+                    groupes d'appartenance, ce qui contribue à forger des significations collectives de référence des
+                    emojis. Les personnes peuvent donc
+                    être familières avec certains types de signification et pas d'autres, ce qui peut mener parfois à
+                    des quiproquos ou à des incompréhensions
+                    lorsqu'elles commencent à échanger avec quelqu'un d'autre qui ne fait pas partie du groupe social.
+                </p>
+                <p>
+                    Et vous utilisez-vous beaucoup les emojis? Est-ce qu'il y a plusieurs significations selon vos
+                    groupes d'amis ou familiaux? Vous
+                    arrive-t-il de ne pas comprendre la personne utilise tel ou tel emoji?
+                </p>
+                <p>
+                    Si cela vous intéresse, nous vous invitons à répondre sur le cahier situé à côté de la fiche de
+                    présentation du QR Code! Bonne fin de visite :)
+                </p>
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
+        </div>
+        <div id="message-gifs-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'gifs'">
+            <h2>Les GIFs </h2>
+            <div>
+                <img src="../../assets/whatsapp/messageGif.png" alt="">
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Mathias, 26 ans étudiant
+                </div>
+                <p>"Les GIFS c'est plus
+                    profond, entre guillemet. Je
+                    trouve que c'est aussi parce
+                    qu'il y a une panoplie de gif
+                    qui est hyper diversifiée, il y
+                    en a tellement. Donc tu
+                    peux l'adapter à toutes les
+                    situations. Tu peux vraiment
+                    exprimer réellement ce que
+                    tu ressens."</p>
+
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Angèle, 22 ans étudiante
+                </div>
+                <p>"C'est pour ça que je
+                    n'utilise pas, c'est qu'il y
+                    en a trop, c'est trop varié.
+                    Et du coup, je trouve ça
+                    trop vaste et je m'y perds.
+                    Et je n'ai pas envie de
+                    passer 15 minutes à
+                    trouver le bon truc qui
+                    correspond à ce que je
+                    veux dire. Du coup, en
+                    fait, je n'y risque pas. Je
+                    préfère passer par les
+                    emojis, quitte à en mettre
+                    plusieurs. C'est plus
+                    facile à trouver et je
+                    perds moins de temps
+                    que les GIFS où il y en a
+                    trop."</p>
+
+            </div>
+
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+
+            <div id="message-gifs-3" class="explication_stories" *ngIf="currentStep === 3">
+                <h2>Explication des émojis</h2>
+                <p>
+                    Un gif est une animation avec une image, un emoji ou une vidéo, passée en boucle, sans son. Ce sont
+                    souvent des
+                    extraits de films et de séries, avec des personnages et des situations représentés qui renvoient à
+                    une ambiance, à une
+                    émotion ou à un type d'humour. Pour Mathias, répondre à des messages écrits, vocaux, ou vidéo, par
+                    GIF, a
+                    beaucoup d'impact.
+                </p>
+                <p>
+                    Selon lui, il existe une plus grande "panoplie", une plus grande diversité de GIFS, pour
+                    retranscrire et partager, plus
+                    profondément, une émotion ou une pensée, à son interlocuteur. Par exemple, utiliser le GIF avec une
+                    personne qui
+                    saute et danse, peut servir à communiquer sa joie à son interlocuteur. Angèle ne les utilise pas
+                    pour cette raison de
+                    diversité et de multitudes de GIFS, car trouver celui qui pourrait le plus exprimer ce que l'on veut
+                    communiquer,
+                    prend davantage de temps. Elle utilise donc les emojis.
+                </p>
+                <p>
+                    Et vous, avez-vous l'habitude d'utiliser les GIFS? Dans quel contexte les utilisez-vous?
+                    Préférez-vous aussi les
+                    emojis?
+                </p>
+                <p>
+                    Si cela vous intéresse, nous vous invitons à répondre sur le cahier situé à côté de la fiche de
+                    présentation du QR Code! Bonne fin de visite :)
+                </p>
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
+        </div>
+        <div id="message-appel-video-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'appel-video'">
+            <h2>Les GIFs </h2>
+            <div>
+                <img src="../../assets/whatsapp/appelVideo.png" alt="">
+            </div>
+            <div class="message">
+                <div class="sender-details">
+                    Aurélie, 22 ans, étudiante,
+                </div>
+                <p>"La discussion est plus... Je sais pas, comme
+                    si c'était en vrai quoi, un peu. Le fait de voir la
+                    personne, tu vois ses réactions. Et c'est plus
+                    fluide. Et puis même, en général, ma mère me
+                    montre, je sais pas, ce qu'elle a fait dans la
+                    maison. Elle est généralement avec mon frère
+                    ou mon père. On fait même des appels
+                    groupés avec ma sœur qui est à Grenoble,
+                    aussi. Du coup, ça permet de nous voir. Et vu
+                    qu'on se voit pas souvent dans l'année, c'est
+                    cool. "</p>
+                <strong>sur les appels vidéos whats app</strong>
+
+            </div>
+
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+
+            <div id="message-appel-video-3" class="explication_stories" *ngIf="currentStep === 3">
+                <h2>Explication des appels vidéo</h2>
+                <p>
+                    Ici, Aurélie rappelle que les appels vidéos servent à "se voir" en même temps, à faire comme si
+                    "c'était en vrai".
+                    Les appels de ce type remédient à la distance physique géographique avec les personnes avec qui on
+                    est en contact,
+                    en se rendant chacun et chacune présents en temps réel à l'action de l'autre.
+                </p>
+                <p>
+                    Aurélie voit très peu sa famille. Les appels vidéos sont donc un moyen pour elle et ses proches de
+                    prolonger leurs
+                    liens de façon "plus fluide", en partageant ce qu'ils font à l'instant T et en discutant comme s'ils
+                    étaient en présence
+                    les uns des autres. Pour les personnes l'appel vidéo est donc un moyen de partager l'instantanéité
+                    d'un moment par
+                    le son et l'image directe. Il contribue à créer une ambiance à travers laquelle on a l'impression de
+                    vivre ensemble une
+                    action. Ainsi, il donne l'impression d'être en présence des autres, de recréer la proximité d'une
+                    interaction réelle, en
+                    partageant de manière spontanée ce qu'on fait.
+                </p>
+                <p>
+                    Et vous qu'en pensez-vous? Avez-vous l'habitude de faire des appels vidéos? Avec qui et pour quelles
+                    raisons?
+                </p>
+                <p>
+                    Si cela vous intéresse, nous vous invitons à répondre sur le cahier situé à côté de la fiche de
+                    présentation du QR Code! Bonne fin de visite :)
+                </p>
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a routerLink="/insta"><img src="../../assets/icons/Instagram.png" alt=""></a></li>
+            <li><a routerLink="/snap"><img src="../../assets/icons/snapchat.png" alt=""></a></li>
+            <li><a routerLink="/phoneHomePage"><img src="../../assets/icons/home.png" alt=""></a></li>
+            <li><a routerLink="/whatsapp"><img src="../../assets/icons/whatsapp.png" alt=""></a></li>
+            <li><a routerLink="/tiktok"><img src="../../assets/icons/tiktok.png" alt=""></a></li>
+        </ul>
+    </nav>
+</main>

@@ -1,18 +1,21 @@
 <main class="mainFrame">
     <div class="container">
-        <img src="../../assets/icons/Instagram.png" alt="Snapchat Icon" class="snapIcon">
+        <img src="../../assets/icons/Instagram.png" alt="Instagram Icon" class="snapIcon">
         <h1>Instagram</h1>
         <p>Bienvenue sur la page Instagram !</p>
 
         <div>
             <h2>Les moyens de communication</h2>
-            <ul>
-                <li>l'envoi de Reels Instagram</li>
-                <li>le partage de Stories instagram</li>
-            </ul>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <button  class="home-button" (click)="choiceReels()">L'envoi de Reels Instagram</button>
+                <button  class="home-button" (click)="choiceStories()">Le partage de Stories instagram</button>
+            </div>
         </div>
-        <div id="message-reels" class="messages-container">
+        <div id="message-reels-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'reels'">
             <h2>Les Reels Instagram</h2>
+            <div>
+                <img src="../../assets/insta/insta-reels.png" alt="">
+            </div>
             <div class="message">
                 <div class="sender-details">
                     Juliette, vendeuse en boulangerie, 21 ans
@@ -34,9 +37,41 @@
                     choses à se partager, je trouve que c'est un
                     moyen d'avoir un lien en fait. C'est ça."</p>
             </div>
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
+            <div id="message-reels-3" class="explication_Reels" *ngIf="currentStep === 3">
+                <h2>Explication des Réels</h2>
+                <p>
+                    Les Réels Instagram sont des vidéos de courte durée qui peuvent être produites par tous les
+                    utilisateurs d'Instagram, à des fins de
+                    divertissement et à être partagées. On observe ici une conversation entre deux personnes qui
+                    s'envoient mutuellement ce type de vidéo,
+                    sans qu'il n'y ait aucun texte, mais parfois des réactions avec des emojis. Juliette explique que
+                    les conversations avec sa sœur sur
+                    instagram prennent souvent cette forme. Pour Mathias, ce type de conversation lui permet de “garder
+                    du lien” avec des proches, qu'il
+                    voit peu en les faisant rire et réagir avec des contenus déjà réalisés, sans pour autant avoir à
+                    discuter avec eux. Ainsi, les reels Instagram
+                    sont considérés comme un moyen de transmission facile et rapide des ambiances, et d'échanges
+                    d'informations et de formes d'humour,
+                    susceptibles de résonner chez le destinataire.
+                </p>
+                <p>
+                    Et vous qu'en pensez-vous? Avez-vous ce genre de conversations sur Instagram? A qui et pour quelles
+                    raisons envoyez-vous des
+                    Reels Instagram? En quoi cela peut-être différent de Tik Tok?
+                </p>
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
+            </div>
         </div>
-        <div id="message-stories" class="messages-container">
+        <div id="message-stories-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'stories'">
             <h2>Les Stories Instagram</h2>
+            <div>
+                <img src="../../assets/insta/insta-story.png" alt="">
+            </div>
             <div class="message">
                 <div class="sender-details">
                     Juliette, vendeuse en boulangerie, 21 ans
@@ -63,32 +98,12 @@
                     qui je suis, ouais... Ça je vais le faire avec mes
                     potes. En général, c'est mes potes très proches.</p>
             </div>
-
-            <div class="explication_Reels">
-                <h2>Explication des Réels</h2>
-                <p>
-                    Les Réels Instagram sont des vidéos de courte durée qui peuvent être produites par tous les
-                    utilisateurs d'Instagram, à des fins de
-                    divertissement et à être partagées. On observe ici une conversation entre deux personnes qui
-                    s'envoient mutuellement ce type de vidéo,
-                    sans qu'il n'y ait aucun texte, mais parfois des réactions avec des emojis. Juliette explique que
-                    les conversations avec sa sœur sur
-                    instagram prennent souvent cette forme. Pour Mathias, ce type de conversation lui permet de “garder
-                    du lien” avec des proches, qu'il
-                    voit peu en les faisant rire et réagir avec des contenus déjà réalisés, sans pour autant avoir à
-                    discuter avec eux. Ainsi, les reels Instagram
-                    sont considérés comme un moyen de transmission facile et rapide des ambiances, et d'échanges
-                    d'informations et de formes d'humour,
-                    susceptibles de résonner chez le destinataire.
-                </p>
-                <p>
-                    Et vous qu'en pensez-vous? Avez-vous ce genre de conversations sur Instagram? A qui et pour quelles
-                    raisons envoyez-vous des
-                    Reels Instagram? En quoi cela peut-être différent de Tik Tok?
-                </p>
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
             </div>
-            <div class="explication_stories">
-                <h2>Explication des Réels</h2>
+            
+            <div id="message-stories-3" class="explication_stories" *ngIf="currentStep === 3">
+                <h2>Explication des Stories</h2>
                 <p>
                     Une story instagram permet aux utilisateurs de publier des photos ou vidéos, des sondages, des
                     emojis, des liens, ou de republier le
@@ -115,7 +130,9 @@
                     Et vous qu'en pensez-vous? Publiez-vous des stories? En public? En privé? Quelle importance y
                     apportez-vous?
                 </p>
-
+                <div>
+                    <button (click)="restart()" class="home-button">Recommencer la visite</button>
+                </div>
             </div>
         </div>
     </div>
@@ -124,7 +141,7 @@
         <ul>
             <li><a routerLink="/insta"><img src="../../assets/icons/Instagram.png" alt=""></a></li>
             <li><a routerLink="/snap"><img src="../../assets/icons/snapchat.png" alt=""></a></li>
-            <li><a routerLink="/"><img src="../../assets/icons/home.png" alt=""></a></li>
+            <li><a routerLink="/phoneHomePage"><img src="../../assets/icons/home.png" alt=""></a></li>
             <li><a routerLink="/whatsapp"><img src="../../assets/icons/whatsapp.png" alt=""></a></li>
             <li><a routerLink="/tiktok"><img src="../../assets/icons/tiktok.png" alt=""></a></li>
         </ul>

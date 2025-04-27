@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 768px) {
   .virtualTour {
-    padding: 20px;
+    padding: 0;
   }
 
   .virtualTour h1 {
@@ -64,4 +64,5 @@
   .virtualTour li {
     font-size: 2vh;
   }
+
 }

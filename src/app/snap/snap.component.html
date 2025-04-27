@@ -21,6 +21,8 @@
         </span>
         <div id="message-vocal-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'vocal'">
             <h2>Les messages vocaux</h2>
+            <img src="../../assets/snap/vocal.png" alt="">
+
             <div class="message">
                 <div class="sender-details">
                     Mathias, 26 ans, étudiant
@@ -46,8 +48,9 @@
                     Tu fais des vocaux avec une personne avec qui tu es à l'aise de parler en vocal et que ça ne va pas
                     déranger d'entendre ta vieille voix alors qu'il est en train d'écouter de la musique."</p>
             </div>
-            <img src="../../assets/snap/vocal.png" alt="">
-            <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
+            </div>
 
             <div id="message-vocal-3" class="explication_messages" *ngIf="currentStep === 3">
                 <h2>Explications sur les messages vocaux</h2>
@@ -72,6 +75,10 @@
         </div>
         <div id="message-photo-2" class="messages-container" *ngIf="currentStep >= 2 && type === 'photo'">
             <h2>Les conversation photo et vidéos</h2>
+            <div class="image_temoignage" style="flex-wrap: wrap;" >
+                <img src="../../assets/snap/photo.png" alt="">
+                <img src="../../assets/snap/photo-exemple.png" alt="">
+            </div>
             <div class="message">
                 <div class="sender-details">
                     Angèle, 22 ans, étudiante
@@ -96,12 +103,10 @@
                     réagir. Quand j'écris avec une réaction, j'ai la
                     tête que j'ai, etc."</p>
             </div>
-            <div class="image_temoignage" >
-                <img src="../../assets/snap/photo.png" alt="">
-                <img src="../../assets/snap/photo-exemple.png" alt="">
+            
+            <div>
+                <button (click)="nextStep()" class="home-button">Passez aux explications</button>
             </div>
-
-            <button (click)="nextStep()" class="home-button">Passez aux explications</button>
             
             <div id="message-photo-3" class="explication_video_photo" *ngIf="currentStep === 3"> 
                 <h2>Explications sur les messages photo et vidéos</h2>

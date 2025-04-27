@@ -115,8 +115,15 @@ nav ul li img:hover {
 
 @media screen and (max-width: 768px) {
     .mainFrame {
-        width: 95vw;
-        height: 95vh;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        translate: 0;
+        top: 0%; 
+        left: 0; 
+        transform: translate(0%, 0%); 
+        width: 700px;
+        max-width: 100vw;
     }
 
     .statusBar {
@@ -127,6 +134,7 @@ nav ul li img:hover {
     nav {
         height: auto;
         padding: 10px 0;
+        bottom: 0 !important;
     }
 
     nav ul {
@@ -134,9 +142,10 @@ nav ul li img:hover {
         gap: 20px;
     }
 
+
     nav ul li img {
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -145,13 +154,12 @@ nav ul li img:hover {
         font-size: 3vh;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
+    nav{
+        height: 80px !important;
+    };
 
     nav ul li img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 }

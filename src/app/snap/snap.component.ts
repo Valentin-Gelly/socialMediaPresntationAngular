@@ -7,8 +7,9 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './snap.component.html',
-  styleUrls: ['./snap.component.css', '../phone-home-page/phone-home-page.component.css', '../insta/insta.component.css'],
+  styleUrls: ['./snap.component.css', '../phone-home-page/phone-home-page.component.css'],
 })
+
 export class SnapComponent {
   currentStep: number = 1;
   type: string = '';

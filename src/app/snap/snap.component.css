@@ -2,11 +2,6 @@
     padding: 0 !important;
 }
 
-.snapIcon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
 
 .container {
     background-color: white;
@@ -79,7 +74,7 @@ h1, p {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
@@ -103,5 +98,6 @@ h1 {
 
   .image_temoignage{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
   }

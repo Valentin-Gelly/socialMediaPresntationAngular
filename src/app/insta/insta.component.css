@@ -2,9 +2,8 @@
 
 nav {
     position: absolute !important;
-    bottom: -80px !important ;
+    bottom: -80px;
     width: 100% !important;
-    height: 120px !important;
     background-color: rgba(0, 0, 0, 0.1) !important;
     transition: bottom 0.3s ease !important;
     overflow: hidden !important;
@@ -20,17 +19,12 @@ nav:hover {
     nav {
         height: auto;
         padding: 10px 0;
-        height: ;
     }
 
     .mainFrame:hover nav {
         bottom: 0;
     }
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
 
     nav ul li img {
         width: 60px;
@@ -42,11 +36,6 @@ nav:hover {
 @media screen and (max-width: 480px) {
     nav {
         bottom: -40px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
     }
 
     nav ul li img {
