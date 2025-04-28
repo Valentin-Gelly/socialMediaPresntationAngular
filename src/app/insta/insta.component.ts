@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-insta',
   standalone: true,
   templateUrl: './insta.component.html',
-  styleUrls: ['../snap/snap.component.css', '../phone-home-page/phone-home-page.component.css'],
+  styleUrls: ['../phone-home-page/phone-home-page.component.css', '../snap/snap.component.css'],
   imports: [
     CommonModule,
     RouterLink

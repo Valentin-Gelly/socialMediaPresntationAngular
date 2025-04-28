@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './snap.component.html',
-  styleUrls: ['./snap.component.css', '../phone-home-page/phone-home-page.component.css'],
+  styleUrls: ['../phone-home-page/phone-home-page.component.css', './snap.component.css'],
 })
 
 export class SnapComponent {

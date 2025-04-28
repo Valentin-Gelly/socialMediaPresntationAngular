@@ -2,6 +2,18 @@
     padding: 0 !important;
 }
 
+nav {
+    position: absolute !important;
+    bottom: -80px;
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    transition: bottom 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+nav:hover {
+    bottom: 0 !important;
+}
 
 .container {
     background-color: white;

@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-whats-app',
   standalone: true,
   templateUrl: './whats-app.component.html',
-  styleUrls: ['../snap/snap.component.css', '../phone-home-page/phone-home-page.component.css'],
+  styleUrls: ['../phone-home-page/phone-home-page.component.css', '../snap/snap.component.css'],
   imports: [
     CommonModule,
     RouterLink
